@@ -7,10 +7,66 @@
         <meta name="description" content="bing起始页">
         <style>
             body{
-                background-image: url(/Users/sacrifice008v/Desktop/wxq/学校/2021~2022 下（大二下）/网页编辑/用到的元素/spider.jpeg);
-                
-
+                background-image: url("spider.jpeg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            form{
+                text-align: center;
+                margin-top: 180px;
+            }
+            .qqq{
+                list-style-type: none;
+                background-color: rgb(231, 173, 254);
+                display: inline;
+                position: relative;
+                display:inline-block ;
+                z-index: 1;
+            }
+            .qwe{
+                list-style-type: none;
+                background-color: rgb(231, 173, 254);
+                display: none;
+                position: absolute;
+                min-width: 160px;
+            }
+            .qwe {
+                color: aliceblue;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: none;
+            }
+            .qwe a:hover{
+                background-color: antiquewhite;
+            }
+            .qqq:hover .qwe{
+                display: block;
             }
         </style>
     </head>
+    <body>
+        <img src="binglogo.png" alt="binglogo" width="5%">
+        <ul class="qqq">
+            <a href="">Image</a>
+        </ul>
+        <ul class="qqq">
+            <a href="">Video</a>
+        </ul>
+        <ul class="qqq">
+            <a href="">Translate</a>
+        </ul>
+        <ul class="qqq">
+            <a href="">...</a>
+            <ul class="qwe">
+                <li><a href="">Maps</a></li>
+                <li><a href="">Travel</a></li>
+                <li><a href="">MNS</a></li>
+                <li><a href="">TakeLessons</a></li>
+            </ul>
+        </ul>
+        <form action="">
+            <input type="text" size="100px">
+            <input type="button" value="搜索">
+        </form>
+    </body>
 </html>
