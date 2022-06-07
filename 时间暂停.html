@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>计时器</title>
+        <style>
+            div{
+                font-size: 70px;
+                text-align: center;
+                color: aliceblue;
+            }
+            #time{
+                color: rgb(0, 170, 255);
+            }
+            #anniu{
+                font-size: large;
+                width: 200px;
+                height: 50px;
+                border-radius: 30px;
+            }
+            body{
+                background-image: url(spy.png);
+            }
+        </style>
+        <script>
+            var t = 0 ; click_times = 0 ;
+        </script>
+    </head>
+    
+    <body>
+        
+        <div>
+            <button id="anniu" onclick="update();">开始计时</button>
+            <p>Time passed: <b id="time">0</b> s</p>
+        </div>
+        <script>
+            var ct = click_times , run = null;
+        
+            function update(){
+                ct++;
+                if(ct % 2 == 0){
+                    clearInterval(run);push.innerHTML = '继续计时';
+                }else{
+                    run = setInterval("timer()",1000);push.innerHTML = '暂停计时';
+                }
+            }
+            
+            function timer(){
+                t++;
+                time.innerHTML = t ;
+            }
+        </script>
+    </body>
+</html>
